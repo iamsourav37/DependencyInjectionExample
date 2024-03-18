@@ -1,6 +1,8 @@
-﻿namespace Services
+﻿using ServiceContracts;
+
+namespace Services
 {
-    public class CityService
+    public class CityService : ICityService
     {
 
         private List<string> _cities;
@@ -17,6 +19,10 @@
             _cities.Add("Delhi");
             _cities.Add("Bengaluru");
             _cities.Add("Hyderabad");
+            _cities.Add("Pune");
+            _cities.Add("Gangtok");
+            _cities.Add("Bolpur");
+            _cities.Add("Dubrajpur");
 
             return _cities;
         }

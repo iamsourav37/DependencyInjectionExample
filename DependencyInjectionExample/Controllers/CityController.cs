@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Services;
+using ServiceContracts;
 
 namespace DependencyInjectionExample.Controllers
 {
     public class CityController : Controller
     {
 
-        private readonly CityService _cityService;
+        private readonly ICityService _cityService;
 
-        public CityController()
+        public CityController(ICityService cityService)
         {
-            _cityService = new CityService();
+            _cityService = cityService;
         }
         public IActionResult Index()
         {
