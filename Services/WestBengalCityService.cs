@@ -9,6 +9,14 @@ namespace Services
 {
     public class WestBengalCityService : ICityService
     {
+        private Guid _guid;
+        public WestBengalCityService()
+        {
+            _guid = Guid.NewGuid();
+        }
+
+        public Guid Guid => _guid;
+
         public List<string> GetCities()
         {
             return new List<string>()

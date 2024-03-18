@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.Add(new ServiceDescriptor(typeof(ICityService),
-                                           typeof(WestBengalCityService),
+                                           typeof(CityService),
                                            ServiceLifetime.Transient));
 
 var app = builder.Build();
